@@ -67,8 +67,13 @@ let mut x=1;
             for number in (1..100).rev(){
 
                 println!("{}", number);
-                println!("LIFTOFF!!!!!!");
+               
             }
+             println!("LIFTOFF!!!!!!");
+
+             for n in 1..50{
+                println!("{}", n);
+             }
 }
 
 

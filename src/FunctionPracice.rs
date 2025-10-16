@@ -4,6 +4,8 @@ fn main(){
     another_function();
     my_age(23);
     test_function(40,50);
+    println!("The fibonaci of {} is {}",9,fib(9));
+    println!("The factorial of {} is {}", 5, fact(5));
 
 
 
@@ -53,7 +55,34 @@ fn plus_one(x:i32) -> i32{
 
 fn fib(num: i32)->i32{
 
+    if num == 0{
+        return 0;
+    }
+
+    if num == 1 {
+      return num;
+    }
+
+    return fib(num-1) + fib(num-2);
     
+
+}
+
+fn fact(num: i32)-> i32{
+
+    let mut result :i32 = 1;
+    if num == 0{
+        return 1;
+    }
+    if num == 1{
+        return 1;
+    }
+
+    for n in (1..num+1).rev(){
+      result = result * n;
+
+    }
+    return result;
 
 }
 
