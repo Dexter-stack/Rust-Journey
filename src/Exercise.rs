@@ -9,6 +9,11 @@ fn convert_f_to_c(temp :i32)-> i32{
 }
 
 
+// lambda function
+
+
+
+
 fn main(){
 
 println!("The value of {}, from degree celcious to F is {}", 32, conver_c_to_f(32));
@@ -16,7 +21,11 @@ println!("The value of {}, from degree F to C is {}", 32, convert_f_to_c(32));
 
 println!("The value of {} fibonaci is {}", 9, fib(9));
 
+let multiply = |a: i32, b: i32| a*b;
 
+println!("This is the output of lambda function :{}",multiply(32,2));
+
+}
 fn fib(num: i32)-> i32{
 
     if num ==0{
@@ -33,4 +42,3 @@ fn fib(num: i32)-> i32{
 
 
 
-}
