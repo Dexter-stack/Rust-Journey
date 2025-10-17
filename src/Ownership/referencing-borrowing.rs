@@ -19,13 +19,34 @@ fn main(){
     println!("{}",r1);
 
     }
-    
+
     {
  let r2 = &mut my_string;
   println!("{}",r2);
     }
+
+// Rule 1: You can’t have multiple mutable references:
+// let r1 = &mut s;
+// let r2 = &mut s; // ❌ error
+
+// Rule 2: You can’t mix mutable & immutable borrows:
+// let mut s = String::from("hello");
+
+// let r1 = &s; // immutable
+// let r2 = &mut s; // ❌ error
+
+// ✅ Either:
+
+// Many immutable references (&T)
+// OR
+
+// Exactly one mutable reference (&mut T)
+
+// But NOT both at the same time.
+
    
     
+
    
 
 
